@@ -1,6 +1,7 @@
 {
   "name": "pack-manager",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "build": "remix vite:build",
     "dev": "shopify app dev",
@@ -75,5 +76,5 @@
   "overrides": {
     "@graphql-tools/url-loader": "8.0.16"
   },
-  "author": "Mathias"
+  "author": "Mathias Do Vale"
 }
