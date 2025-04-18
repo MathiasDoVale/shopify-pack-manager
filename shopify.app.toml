@@ -1,0 +1,36 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "91f055b3958e791467c35ac51a890255"
+application_url = "https://hispanic-alternative-rage-reproduce.trycloudflare.com"
+embedded = true
+name = "pack-manager"
+handle = "pack-manager"
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://hispanic-alternative-rage-reproduce.trycloudflare.com/auth/callback",
+  "https://hispanic-alternative-rage-reproduce.trycloudflare.com/auth/shopify/callback",
+  "https://hispanic-alternative-rage-reproduce.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
